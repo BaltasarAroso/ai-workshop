@@ -1,7 +1,10 @@
-require('dotenv').config()
 import TwitterDigestAgent from './agents/TwitterDigestAgent'
 import cron from 'node-cron'
-import config from './config/config.ts'
+import config from './config/config'
+
+// Load environment variables
+import dotenv from 'dotenv'
+dotenv.config()
 
 // Initialize agent
 const agent = new TwitterDigestAgent()

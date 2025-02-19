@@ -9,4 +9,3 @@ In this step, you will create two TypeScript functions that uses AI to summarize
 ### 3. Reasoning - AI Agent
 
 1. Implement the `summarizeWithAI` method to summarize tweets using OpenAI.
-2. Implement the `summarizeSummary` method to summarize multiple summaries into one.

@@ -13,3 +13,7 @@ In this step, you will fetch the tweets from users.
 3. Use the `Scraper` class from the `agent-twitter-client` package to get tweets.
 4. Filter the tweets based on a specific timeframe.
 5. Handle errors appropriately and log them.
+
+## Tip
+
+Take a look at `getTweets()` and `getTweetsWhere()` method from `Scraper`.

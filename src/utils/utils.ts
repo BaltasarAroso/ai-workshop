@@ -1,12 +1,20 @@
-const marked = require('marked');
+import { marked } from 'marked';
+
+interface EmailContentParams {
+  timeframe: number;
+  summary: string;
+  users: string[];
+}
 
 // Format Email Content
-async function formatEmailContent(timeframe, summary, users) {
+export async function formatEmailContent({ timeframe, summary, users }: EmailContentParams): Promise<string> {
     // Convert markdown to HTML
     const htmlSummary = marked.parse(summary);
     
     // Format users
-    const formattedUsers = users.map(user => `<a href="https://twitter.com/${user}">${user}</a>`).join(', ');
+    const formattedUsers = users
+      .map(user => `<a href="https://twitter.com/${user}">${user}</a>`)
+      .join(', ');
 
     const emailBody = `
         <h1>Twitter Digest Summary</h1>
@@ -29,13 +37,9 @@ async function formatEmailContent(timeframe, summary, users) {
                 border-left: 4px solid #ddd;
                 margin: 10px 0;
                 padding-left: 10px;
-                color: #666;
+                color: #557;
             }
         </style>
     `;
     return emailBody;
-}
-
-module.exports = {
-    formatEmailContent
-};
+} 

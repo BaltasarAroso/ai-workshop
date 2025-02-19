@@ -1,3 +1,21 @@
+import path from 'path'
+import fs from "fs";
+
+// Find the root directory of the project
+function findRoot(dir: string): string {
+  if (fs.existsSync(path.join(dir, "package.json")) || fs.existsSync(path.join(dir, ".git"))) {
+    return dir;
+  }
+  const parent = path.dirname(dir);
+  return parent !== dir ? findRoot(parent) : dir;
+}
+
+// Load environment variables
+import dotenv from 'dotenv'
+dotenv.config({
+  path: path.join(findRoot(process.cwd()), '.env')
+})
+
 export interface Config {
   openai: {
     apiKey: string
@@ -22,6 +40,10 @@ export interface Config {
     to: string
   }
   updateFrequency: number
+  cookiePath: string
+  databasePath: string
+  promptTemplatePath: string
+  usersPath: string
 }
 
 const config: Config = {
@@ -48,6 +70,12 @@ const config: Config = {
     to: process.env.EMAIL_TO || '',
   },
   updateFrequency: parseInt(process.env.UPDATE_FREQUENCY || '24', 10), // in hours
+  
+  // Paths
+  cookiePath: path.join(findRoot(process.cwd()), 'cookies.json'),
+  databasePath: path.join(findRoot(process.cwd()), 'memory'),
+  promptTemplatePath: path.join(findRoot(process.cwd()), 'data/prompt_template.txt'),
+  usersPath: path.join(findRoot(process.cwd()), 'data/twitter_users.txt'),
 }
 
 export default config
