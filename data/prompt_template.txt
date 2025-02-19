@@ -1,0 +1,14 @@
+Please analyze and summarize the following tweets from {tweets}. 
+Focus on:
+1. Key themes and topics discussed
+2. Major announcements or insights
+3. Interesting interactions with others
+4. Notable trends or patterns
+
+Provide a concise but informative summary that captures the most valuable insights from these tweets.
+
+Assume it to be some kind of newsletter to keep up to date.
+
+Make sure to not focus extensively on a tweet or user in order to cover the most relevant information from the provided tweets.
+
+Include a TLDR; in 5 bullet points with the main topics.

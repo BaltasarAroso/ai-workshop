@@ -1,0 +1,22 @@
+{
+  "name": "twitter-digest-ai",
+  "version": "1.0.0",
+  "description": "AI-powered Twitter digest and summary tool",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node src/test.js",
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "agent-twitter-client": "^0.0.18",
+    "dotenv": "^16.3.1",
+    "marked": "^11.2.0",
+    "node-cron": "^3.0.2",
+    "nodemailer": "^6.9.7",
+    "openai": "^4.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
