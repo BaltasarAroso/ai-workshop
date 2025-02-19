@@ -212,8 +212,9 @@ class TwitterDigestAgent {
     }
     // send email
     try {
+      console.log('🔄 Sending email')
       await this.sendEmail(summary)
-      console.log('✅ Successfully sent email to ', config.email.to)
+      console.log('📧 Email sent successfully to ', config.email.to)
     } catch (error) {
       console.error('❌ Failed to send email:', error)
       throw error

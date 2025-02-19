@@ -67,3 +67,10 @@ constructor() {
 ## Next Steps
 
 Once you've implemented the constructor and set up your environment variables, you can proceed to the next step. The file loading methods (`loadUsers` and `loadPromptTemplate`) are already implemented for you.
+
+## How to Run / Test
+
+Ensure you are in the main directory.
+```bash
+npm run step1
+```

@@ -45,3 +45,10 @@ const content = fs.readFileSync('path/to/file', 'utf-8')
 ```typescript
 const lines = content.split('\n').filter(line => line.trim() !== '')
 ```
+
+## How to Run / Test
+
+Ensure you are in the main directory.
+```bash
+npm run step0
+```

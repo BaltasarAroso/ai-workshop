@@ -12,7 +12,7 @@ An AI-powered Twitter digest system that monitors selected Twitter accounts, sum
 
 ## Prerequisites
 
-- Node.js (v14 or higher)
+- Node.js (v20 or higher)
 - OpenAI API key
 - Twitter API credentials
 - SMTP email server access
@@ -23,7 +23,7 @@ An AI-powered Twitter digest system that monitors selected Twitter accounts, sum
 
 ```bash
 git clone git@github.com:BaltasarAroso/ai-workshop.git
-cd twitter-digest-ai
+cd ai-workshop
 ```
 
 2. Install dependencies:
@@ -119,9 +119,10 @@ The system will:
 
 ### Update Frequency
 Modify the `UPDATE_FREQUENCY` in your `.env` file:
-- `hourly`: Runs every hour
-- `daily`: Runs once per day
-- `weekly`: Runs once per week
+- `0.25`: Runs every 15 minutes
+- `1`: Runs every hour
+- `24`: Runs once per day
+- `168`: Runs once per week
 
 ### Email Template
 Customize the email format by modifying the `formatEmailContent` method in `utils/utils.js`.

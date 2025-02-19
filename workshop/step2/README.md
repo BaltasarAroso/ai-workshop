@@ -17,3 +17,10 @@ In this step, you will fetch the tweets from users.
 ## Tip
 
 Take a look at `getTweets()` and `getTweetsWhere()` method from `Scraper`.
+
+## How to Run / Test
+
+Ensure you are in the main directory.
+```bash
+npm run step2
+```

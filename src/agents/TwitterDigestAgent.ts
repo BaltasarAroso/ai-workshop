@@ -236,6 +236,7 @@ class TwitterDigestAgent {
       }
 
       // Summarize all summaries into one
+      console.log('🔄 Summarizing all summaries into one')
       const allSummaries = await this.db.getAllSummaries()
       const allSummariesSummary = await this.summarizeSummary(allSummaries.map(summary => summary.summary))
       // Save to database
@@ -244,11 +245,13 @@ class TwitterDigestAgent {
         allSummariesSummary,
         allSummaries.map(summary => summary.tweetIds).flat()
       )
+      console.log('✅ All summaries summarized')
 
       // Send email
       if (allSummaries.length > 0) {
+        console.log('🔄 Sending email')
         await this.sendEmail(allSummariesSummary)
-        console.log('📧 Email sent successfully')
+        console.log('📧 Email sent successfully to ', config.email.to)
       } else {
         console.log('No summaries generated to send email')
       }

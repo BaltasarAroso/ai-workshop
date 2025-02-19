@@ -11,7 +11,13 @@
     "format": "prettier --write src/**/*.{js,ts}",
     "typecheck": "tsc --noEmit",
     "clean": "rm -rf dist && rm -rf node_modules",
-    "cron": "ts-node dist/index.js"
+    "cron": "ts-node dist/index.js",
+    "step0": "cd workshop/step0 && ts-node run.ts",
+    "step1": "cd workshop/step1 && ts-node run.ts",
+    "step2": "cd workshop/step2 && ts-node run.ts",
+    "step3": "cd workshop/step3 && ts-node run.ts",
+    "step4": "cd workshop/step4 && ts-node run.ts",
+    "step5": "cd workshop/step5 && ts-node run.ts"
   },
   "dependencies": {
     "@types/nodemailer": "^6.4.17",
