@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@types/nodemailer": "^6.4.17",
-    "agent-twitter-client": "^0.0.18",
+    "agent-twitter-client": "github:timmyg/agent-twitter-client#main",
     "dotenv": "^16.3.1",
     "marked": "^11.2.0",
     "node-cron": "^3.0.2",
