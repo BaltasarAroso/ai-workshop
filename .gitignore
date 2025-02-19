@@ -40,7 +40,7 @@ ehthumbs.db
 Thumbs.db
 
 # Cookies
-cookies.json
+**/cookies.json
 
 # Build
 dist/
